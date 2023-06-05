@@ -1,0 +1,42 @@
+@import 'vars';
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button {
+
+  &__primary {
+    border: 1px solid $white;
+    background-color: $primary;
+    color: $white;
+    transition: .3s background-color ease-in-out;
+
+    &:hover {
+      background-color: $blue-dark;
+      transition: .3s background-color ease-in-out;
+    }
+  }
+
+  &__secondary {
+    background-color: $white;
+    border: 1px solid $border;
+    color: $secondary-text;
+    outline: none;
+    transition: .3s background-color ease-in-out;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.65);;
+      transition: .3s background-color ease-in-out;
+    }
+  }
+
+  &__block {
+    width: 100%;
+  }
+}
