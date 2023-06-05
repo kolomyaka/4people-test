@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-    base: '/4people_test/'
+    base: '/4people-test/'
 })
