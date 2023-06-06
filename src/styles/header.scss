@@ -1,0 +1,43 @@
+@import 'variables';
+
+// -- header --
+.header {
+  height: $header-height;
+  background-color: rgba(16, 16, 29, 0.9);
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    text-transform: uppercase;
+
+    & span {
+      color: $secondary;
+    }
+  }
+
+  &__nav {
+    text-transform: uppercase;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    font-size: $font-xs;
+    line-height: 15px;
+
+    & li a:hover {
+      color: $secondary;
+    }
+  }
+}

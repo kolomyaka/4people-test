@@ -58,11 +58,111 @@
         </div>
       </section>
       <section class="order-section">
-        <div class="order-section__container container">
+        <form action="/" method="POST" onsubmit="event.preventDefault(); " class="order-section__container container">
+          <div class="order-section__title-container">
+              <h2 class="order-section__title">Оформление <span>Заказа</span></h2>
+              <p class="order-section__subtitle">Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
+          </div>
+          <ul class="order-section__list">
+            <li>
+              <div class="order-section__ellipse">
+                <img src="/src/assets/icons/searchIcon.svg" alt="">
+              </div>
+              <p>Lorem ipsum dolor sit amet</p>
+            </li>
+            <li>
+              <div class="order-section__ellipse">
+                <img src="/src/assets/icons/percentIcon.svg" alt="">
+              </div>
+              <p>Сonsecteturadipiscing elit</p>
+            </li>
+            <li>
+              <div class="order-section__ellipse">
+                <img src="/src/assets/icons/newFileIcon.svg" alt="">
+              </div>
+              <p>Sed do eiusmod tempor</p>
+            </li>
+            <li>
+              <div class="order-section__ellipse">
+                <img src="/src/assets/icons/mailIcon.svg" alt="">
+              </div>
+              <p>Esse cillum dolore eu fugiat</p>
+            </li>
+            <li>
+              <div class="order-section__ellipse">
+                <img src="/src/assets/icons/moneyIcon.svg" alt="">
+              </div>
+              <p>Excepteur sint occaecat cupidatat non proident</p>
+            </li>
+          </ul>
+          <div class="order-section__order-form">
+            <div class="order-form__form-block">
+              <div class="dropdown">
+                <input required type="text" placeholder="Выберите тип системы" />
+                <ul class="options">
+                  <li class="option">Sed ut perspiciatis</li>
+                  <li class="option">Nemo enim ipsam</li>
+                  <li class="option">Et harum quidem</li>
+                  <li class="option">Temporibus autem</li>
+                  <li class="option">Itaque earum rerum</li>
+                </ul>
+              </div>
+              <input required placeholder="Ваш e-mail" type="email" name="Email">
+              <input required placeholder="Ваше имя" type="text" name="Name">
+            </div>
+            <div class="order-form__form-block">
+              <label class="range-input">
+                <div class="range-input__label-block">
+                  <p>Sed ut perspiciatis, unde omnis iste natus</p>
+                  <output id="rangeInput">75 %</output>
+                </div>
+                <input oninput="rangeInput.value = value + ' %'" min="0" max="100" value="75" type="range" name="range">
+              </label>
+              <label class="file-input">
+                <div class="file-input__button">
+                  <img src="/src/assets/icons/fileIcon.svg" alt="fileIcon">
+                  <span>Прикрепить файл</span>
+                </div>
+                <input type="file" name="fileUpload">
+              </label>
+            </div>
+            <div class="order-form__form-button">
+              <button type="submit" class="button__primary button__block">Отправить</button>
+            </div>
+          </div>
+        </form>
 
-        </div>
       </section>
     </main>
+    <footer class="footer">
+      <div class="footer__container container">
+        <p class="footer__title">© 2018 «LOREMIPSUM.NET» Все права защищены.</p>
+        <div class="footer__list">
+          <div class="footer__item">
+            <img src="/src/assets/icons/qiwiIcon.svg" alt="Qiwi wallet">
+            <span class="footer__item-link">QIWI wallet</span>
+          </div>
+          <div class="footer__item">
+            <img src="/src/assets/icons/yandexMoneyIcon.svg" alt="Yandex Money">
+            <span class="footer__item-link">Yandex Money</span>
+          </div>
+          <div class="footer__item">
+            <img src="/src/assets/icons/webMoneyIcon.svg" alt="Web Money">
+            <span class="footer__item-link">Web Money</span>
+          </div>
+        </div>
+        <div class="footer__list">
+          <a href="#" class="footer__item">
+            <img src="/src/assets/icons/footerMail.svg" alt="E-Mail">
+            <span>info@ipsum228.com</span>
+          </a>
+          <a href="#" class="footer__item">
+            <img src="/src/assets/icons/VK-icon.svg" alt="VK">
+            <span>Мы вконтакте</span>
+          </a>
+        </div>
+      </div>
+    </footer>
     <script src="/main.js" type="module"></script>
   </body>
 </html>
