@@ -1,9 +1,6 @@
 @import 'fonts';
 @import 'variables';
 @import 'button';
-@import 'inputs';
-@import 'header';
-@import 'footer';
 
 * {
   margin: 0;
@@ -31,11 +28,18 @@ li {
 body {
   font-family: Lato, sans-serif;
   color: $white;
+
+  &.disable-scroll {
+    overflow: hidden;
+  }
 }
 
 .container {
-  width: 1172px;
+  max-width: 1202px;
   margin: 0 auto;
+  width: 100%;
+  padding: 0 15px;
+  position: relative;
 }
 
 h3 {
@@ -152,8 +156,7 @@ h1 {
   }
 
   &__list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    display: flex;
     gap: 30px;
     align-items: flex-start;
 
@@ -162,7 +165,7 @@ h1 {
       flex-direction: column;
       align-items: center;
       gap: 20px;
-
+      flex: 1 1 0;
       &:last-child .order-section__ellipse::after {
         display: none;
       }
@@ -211,6 +214,7 @@ h1 {
     display: flex;
     align-items: center;
     gap: 30px;
+    justify-content: space-between;
   }
 
   &__form-button {
@@ -219,3 +223,131 @@ h1 {
     width: 100%;
   }
 }
+
+@media (max-width: 1200px) {
+  .container {
+    width: 970px;
+  }
+
+  h1 {
+    font-size: $font-xxl;
+    line-height: $lh-xxl;
+  }
+
+  h2 {
+    font-size: $font-xl;
+    line-height: $lh-xl;
+  }
+
+  h3 {
+    font-size: $font-l;
+    line-height: $lh-l;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    width: 740px;
+  }
+
+  h1 {
+    font-size: $font-xl;
+    line-height: $lh-xl;
+  }
+
+  h2 {
+    font-size: $font-l;
+    line-height: $lh-l;
+  }
+
+  h3 {
+    font-size: $font-m;
+    line-height: $lh-m;
+  }
+
+  .order-form {
+    &__form-block {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: calc(100vw - 32px);
+  }
+
+  h1 {
+    font-size: $font-l;
+    line-height: $lh-l;
+  }
+
+  h2 {
+    font-size: $font-m;
+    line-height: $lh-m;
+  }
+
+  h3 {
+    font-size: $font-s;
+    line-height: $lh-s;
+  }
+
+  p {
+    font-size: $font-s;
+    line-height: $lh-s;
+  }
+
+  .main-section {
+    &__title {
+      text-align: center;
+    }
+  }
+
+  .order-section {
+    &__list {
+      flex-wrap: wrap;
+
+      & li {
+
+        & .order-section__ellipse::after {
+          display: none;
+        }
+      }
+    }
+
+    &__title-container {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .main-section {
+    height: auto;
+
+    &__button-group {
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    &__content {
+      padding: 50px 0;
+      gap: 50px;
+    }
+
+    &__subtitle {
+      text-align: center;
+    }
+
+    &__button-group {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+}
+
+
+@import 'inputs';
+@import 'header';
+@import 'footer';
